@@ -54,11 +54,7 @@
 				<i class="fa fa-google-plus-square" aria-hidden="true"></i>
 			</div>
 
-			<form id="search" class="navbar-form navbar-left" role="search">
-		        <div class="form-group">
-		          <input type="text" class="form-control" placeholder="Search">
-		        </div>
-		    </form>
+			
 		</div>
 
 		<div class="col-md-4">

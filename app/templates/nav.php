@@ -12,6 +12,8 @@
 
 
 
+
+
 <!-- When you are Logged in  -->
 <?php else: ?>
 
@@ -19,5 +21,11 @@
 	<a href="index.php?page=logout"><button id="member" type="button" class="btn btn-primary" >Logout</button></a>
 	
 	<a href="index.php?page=account"><button id="member" type="button" class="btn btn-primary">My Account</button></a>
+
+	<form id="search" class="navbar-form navbar-left" role="search">
+		        <div class="form-group">
+		          <input type="text" class="form-control" placeholder="Search">
+		        </div>
+		    </form>
 	
 <?php endif; ?>

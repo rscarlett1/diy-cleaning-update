@@ -8,8 +8,6 @@ class LoginController extends PageController{
 		//Make sure the PageControllers constructer still runs
 		parent::__construct();
 
-		$this->mustBeLoggedOut();
-		
 		//Save database connection
 		$this->dbc = $dbc;
 		// var_dump($_POST);

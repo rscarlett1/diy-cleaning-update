@@ -7,11 +7,9 @@
 
  ?>
 
- <body>
+ <main>
 
-<?= $this->insert('nav') ?>
-
-<h1>Search Results for "<i><?= $this->e($searchTerm) ?></i>"</h1>
+	<h1>Search Results for "<i><?= $this->e( $searchTerm ) ?></i>"</h1>
 
 <?php if(strlen($searchTerm) > 0): ?>
 	<?php if($searchResults > 0): ?>

@@ -40,7 +40,7 @@ nav ul.nav.navbar-nav li{
 }
 
 #search{
-	padding-left: 180px;
+	padding-left: 100px;
 }
 
 
@@ -391,6 +391,11 @@ nav ul.nav.navbar-nav li{
 
 .delete-post-options{
 	display: none;
+}
+
+.subscribe-list{
+	display: block;
+	width: 400px;
 }
 
 

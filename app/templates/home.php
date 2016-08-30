@@ -24,21 +24,17 @@
 
 						  <!-- Wrapper for slides -->
 						  <div class="carousel-inner" role="listbox">
-						    <div class="item active">
-						    	<img src="img/slider/white-vinegar.jpg" width="1500" height="800" >
-						      <!-- <img src="img/slider/lemon.jpeg" height="400" width="1400" alt="..."> -->
-						      <div class="carousel-caption">
-						        
-						      </div>
-						    </div>
-						    <div class="item">
-						    <img src="img/slider/lemon-bottle.jpeg" width="1500" height="800">
-						      <!-- <img src="img/slider/lavender1.jpg" height="400" width="1400" alt="..."> -->
-						      <div class="carousel-caption">
-						        
-						      </div>
-						    </div>
-						    
+							 	<div class="item active">
+								    <img src="img/slider/white-vinegar.jpg" width="1500" height="800" >
+								</div>
+
+						  		<div class="item">
+								    <img src="img/slider/laundry.jpg" width="1500" height="800">
+								</div>
+
+								<div class="item">
+								    <img src="img/slider/towels.jpg" width="1500" height="800">
+								</div>
 						  </div>
 
 						  <!-- Controls -->

@@ -10,16 +10,9 @@
 ?>
 
 
-<?php var_dump($recipes); ?>
-
-
-
 <div class="container">
 
-
- 
-
- <h1><a href="index.php?page=recipes&recipesid=<?= $recipe['recipe_id'] ?>">How to clean <u><?=$_GET['type'] ?></u><a></h1>
+  <h1><a href="index.php?page=recipes&recipesid=<?= $recipe['recipe_id'] ?>">How to clean <u><?=$_GET['type'] ?></u><a></h1>
 
  <div class="row">
   <!-- foreach Loop -->

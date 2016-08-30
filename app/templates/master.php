@@ -55,8 +55,6 @@
 				<i class="fa fa-pinterest-square" aria-hidden="true"></i>
 				<i class="fa fa-google-plus-square" aria-hidden="true"></i>
 			</div>
-
-			
 		</div>
 
 		<div class="col-md-4">
@@ -99,9 +97,9 @@
 							<ul class="list-unstyled">
 				  			<li><strong>Navigate Our Website</strong></li>
 				  			<br>
-				  			<li><a href="wwyltc.html">What Would You Like To Clean</a></li>
-				  			<li><a href="about-us.html">About Us</a></li>
-				  			<li><a href="contact-us.html">Contact Us</a></li>
+				  			
+				  			<li><a href="index.php?page=about-us">About Us</a></li>
+				  			<li><a href="index.php?page=contact-us">Contact Us</a></li>
 				  			<li><a href="#">Archived Posts</a></li>
 				  			<li><a href="#">Terms and Conditions</a></li>
 							</ul>	
@@ -117,17 +115,17 @@
 
 						<div class="form-group align">
 						    <label for="exampleInputEmail1">Email address:</label>
-						    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+						    <input type="email" class="form-control subscribe-list" id="exampleInputEmail1" placeholder="Email">
 						</div>
 
 						 <div class="form-group">
-						    <label for="exampleInputPassword1">First Name:</label>
-						    <input type="first-name" class="form-control" id="exampleInputPassword1" placeholder="First Name">
+						    <label class="subscribe-list" for="exampleInputPassword1">First Name:</label>
+						    <input type="first-name" class="form-control subscribe-list" id="exampleInputPassword1" placeholder="First Name">
 						</div>
 
 						  <div class="form-group">
-						    <label for="exampleInputPassword1">Last Name:</label>
-						    <input type="last-name" class="form-control" id="exampleInputPassword1" placeholder="Last Name">
+						    <label class="subscribe-list" for="exampleInputPassword1">Last Name:</label>
+						    <input type="last-name" class="form-control subscribe-list" id="exampleInputPassword1" placeholder="Last Name">
 						</div>
 						  
 						  <button type="submit" >Subscribe</button>
@@ -235,12 +233,6 @@
     </div>
   </div>
 </div>
-
-
-
-
-
-
 
 
 <script src="js/pattern.js"></script>

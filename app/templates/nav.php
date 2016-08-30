@@ -21,11 +21,13 @@
 	<a href="index.php?page=logout"><button id="member" type="button" class="btn btn-primary" >Logout</button></a>
 	
 	<a href="index.php?page=account"><button id="member" type="button" class="btn btn-primary">My Account</button></a>
-
+	
+<div id="">	
 	<form id="search" class="navbar-form navbar-left" role="search">
-		        <div class="form-group">
-		          <input type="text" class="form-control" placeholder="Search">
-		        </div>
-		    </form>
+	<div class="form-group">
+	  	<input type="text" class="form-control" placeholder="Search">
+	 </div>
+	</form>
+</div>
 	
 <?php endif; ?>

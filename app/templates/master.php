@@ -5,7 +5,7 @@
 <head>
 		<meta charset="utf8">
 
-		<title> <?= $title ?> </title>
+		<title><?= $title ?></title>
 
 		<meta name="description" content="<?= $desc ?>">
 
@@ -17,8 +17,10 @@
 		<link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-
+		
+		<script src="ckeditor/ckeditor.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
 
 </head>
 
@@ -151,14 +153,10 @@
 		    <label><b>Email</b></label>
 		    <input type="text" placeholder="Email Address" name="email">
 
-			
-
-		    <label><b>Password</b></label>
+			<label><b>Password</b></label>
 		    <input type="password" placeholder="Enter Password" name="password">
 			
-			
-
-		    <button type="submit" name="new-account">Login</button>
+			<button type="submit" name="new-account">Login</button>
 		    <input type="checkbox" checked="checked"> Remember me
 		  </div>
 
@@ -176,7 +174,7 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
 
-     <form id="sign-up-padding" action="index.php?page=signup" method="post">
+     <form id="sign-up-details" action="index.php?page=signup" method="post">
 
      	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
      	

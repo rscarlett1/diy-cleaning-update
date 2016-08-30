@@ -85,7 +85,7 @@ class AccountController extends PageController{
 		//echo '<pre>';
 		//print_r($_POST);
 		//die();
-
+		
 		//Count errors
 		$totalErrors = 0;
 
@@ -118,7 +118,7 @@ class AccountController extends PageController{
 		}
 
 		// Make sure the user has provided an image
-		if( in_array( $_FILES['image']['error'], [1,3,] ) ) {
+		if( in_array( $_FILES['image']['error'], [1,3] ) ) {
 			// Show error message
 			// Use a switch to generate the appropriate error message
 			$this->data['imageMessage'] = 'Image failed to upload';
@@ -149,6 +149,11 @@ class AccountController extends PageController{
 
 			$image->save("img/uploads/recipes/$fileName$fileExtension");
 
+			$image->resize(800, null, function ($constraint) {
+			     $constraint->aspectRatio();
+			});
+			$image->save("img/uploads/post-size/$fileName$fileExtension");
+
 						
 			//Filter the data
 
@@ -162,6 +167,7 @@ class AccountController extends PageController{
 			// SQL (INSERT)
 			$sql = "INSERT INTO recipe_database (recipe_database.user_id, title, description, method, image)
 					VALUES ('$userID', '$recipetitle', '$recipedesc', '$recipemethod', '$fileName$fileExtension')";
+
 			$this->dbc->query( $sql );
 
 			// Make sure it worked

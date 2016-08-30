@@ -263,7 +263,8 @@ nav ul.nav.navbar-nav li{
 }
 
 #drop-box{
-	padding: 300px;
+	/*padding: 300px;*/
+	margin: 0 auto;
 }
 
 #drop-box label{
@@ -274,9 +275,16 @@ nav ul.nav.navbar-nav li{
 	padding-bottom: 20px;
 }
 
-#sign-up-padding{
-	padding-left: 300px;
-	padding-bottom: 20px;
+#sign-up-details{
+	background-color: #e7ebed;
+	margin: 0 auto;
+	width: 400px;
+	padding: 20px 20px;
+}
+
+#sign-up-details label{
+	display: block;
+	width: 500px;
 }
 
 .success{
@@ -303,12 +311,30 @@ nav ul.nav.navbar-nav li{
 
 #login-form{
 	background-color: #e7ebed;
-	margin: 0 auto;
+	padding: 50px;
 }
 
-.login-padding{
-	margin-bottom: 50px;
+#login-center{
+	margin: 0 auto;
+	width: 550px;
 }
+
+#login-center h1{
+	padding-bottom: 20px;
+}
+
+#social-buttons{
+	padding-bottom: 20px;
+}
+
+.input-details{
+	display: block; 
+	width: 400px;
+}
+
+/*.login-padding{
+	margin-bottom: 50px;
+}*/
 
 #account-details{
 	margin: 0 auto;
@@ -349,12 +375,18 @@ nav ul.nav.navbar-nav li{
 	padding-bottom: 20px;
 }
 
-.comments-padding{
-	padding-left: 30px;
+#recipe-post{
+	background-color: pink;
+	margin: 0 auto;
 }
+
+/*.comments-padding{
+	padding-left: 30px;
+}*/
 
 #full-recipe-heading{
 	color: #ffdd00;
+	background-color: blue;
 }
 
 .delete-post-options{

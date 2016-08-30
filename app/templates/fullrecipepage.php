@@ -11,54 +11,57 @@
 
 
 <main>
-<?php var_dump($fullrecipepage) ?>
+<!--?php var_dump($fullrecipepage) ?>-->
 
 <div class="container">
   <div class="row">
       <!-- foreach Loop -->
       <?php foreach($fullrecipepage as $fullrecipepage): ?>
           <div class=" col-xs-12 col-sm-12 col-md-12">
-            <div class="thumbnail">
+              <div id="recipe-post"class="thumbnail">
 
-            <h1 class="comments-padding" id="full-recipe-heading"><?= htmlentities($fullrecipepage['title']) ?> </h1>
-            <p class="comments-padding"><?= htmlentities($fullrecipepage['description']) ?></p>
-            <p class="comments-padding"><?= htmlentities($fullrecipepage['method']) ?></p>
+                <h1 class="comments-padding" id="full-recipe-heading"><?= htmlentities($fullrecipepage['title']) ?> </h1>
 
-            <img img class="img-responsive" src="img/uploads/recipes/<?= $fullrecipepage['image'] ?>" alt="...">
+                <p class="comments-padding"><?= htmlentities($fullrecipepage['description']) ?></p>
+
+                <p class="comments-padding"><?= htmlentities($fullrecipepage['method']) ?></p>
+              </div>
+
+                <img img class="img-responsive" src="img/uploads/post-size/<?= $fullrecipepage['image'] ?>" alt="...">
       
             <div class="caption">
-              <ul>
-                <li><strong>Posted By: </strong><?= htmlentities($fullrecipepage['first_name'].' '.$fullrecipepage['last_name']) ?></li>
-                <?php
-
-                  if( isset($_SESSION['user_id']) ) {
-
-                    if( $_SESSION['user_id'] == $fullrecipepage['user_id'] ){
-                      // You own post!
-                    ?>
-            <li>
-              <a href="index.php?page=edit-post&id=<?= $_GET['recipe_id'] ?>">Edit</a>
-            </li>
-
-            <li>
-              <button class="delete-post">Delete</button></a>
-              
-                <div class="delete-post-options">
-                  <a href= "<?= $_SERVER['REQUEST_URI'] ?>&delete">Yes</a> / <button>No</button>
-                </div>
-
-            </li>
+                  <ul>
+                    <li><strong>Posted By: </strong><?= htmlentities($fullrecipepage['first_name'].' '.$fullrecipepage['last_name']) ?></li>
                     <?php
+
+                      if( isset($_SESSION['user_id']) ) {
+
+                        if( $_SESSION['user_id'] == $fullrecipepage['user_id'] ){
+                          // You own post!
+                        ?>
+                <li>
+                  <a href="index.php?page=edit-post&id=<?= $_GET['recipe_id'] ?>">Edit</a>
+                </li>
+
+                <li>
+                  <button class="delete-post">Delete</button></a>
+                  
+                    <div class="delete-post-options">
+                      <a href= "<?= $_SERVER['REQUEST_URI'] ?>&delete">Yes</a> / <button>No</button>
+                    </div>
+
+                </li>
+                        <?php
+                      }
+
                   }
 
-              }
-
-            ?>
-          </ul>
-            </div>
+                ?>
+                </ul>
+              </div>
+          </div>
         </div>
-      </div>
-  </div> 
+    </div> 
       <?php endforeach; ?>
   </div>
 

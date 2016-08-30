@@ -70,13 +70,13 @@
 		    	
 					<div class="form-group">
 						<label for"desc">Description</label>
-						<textarea  class="form-control" name="recipe-desc" cols"5" rows="10" value="<?= isset($_POST['description']) ? $_POST['description'] : '' ?>"></textarea>
+						<textarea  class="form-control ckeditor" name="recipe-desc" cols"5" rows="10" value="<?= isset($_POST['description']) ? $_POST['description'] : '' ?>"></textarea>
 						<?= isset($descMessage) ? $descMessage : '' ?>
 					</div>
 
 					<div class="form-group">
 						<label for"method">Method</label>
-						<textarea  class="form-control" name="recipe-methods" cols"80" rows="10" value="<?= isset($_POST['method']) ? $_POST['method'] : '' ?>"></textarea>
+						<textarea  class="form-control ckeditor" name="recipe-methods" cols"80" rows="10" value="<?= isset($_POST['method']) ? $_POST['method'] : '' ?>"></textarea>
 						<?= isset($methodMessage) ? $methodMessage : '' ?>
 					</div>
 
@@ -97,4 +97,13 @@
 		</div>
 	</div>
 </article>
+
+<? php 
+
+	if(isset( $_POST['recipe-methods']) )
+	{
+		$text = $_POST['recipe-methods'];
+
+		echo "text";
+	}
 

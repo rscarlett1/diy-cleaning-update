@@ -98,12 +98,4 @@
 	</div>
 </article>
 
-<? php 
-
-	if(isset( $_POST['recipe-methods']) )
-	{
-		$text = $_POST['recipe-methods'];
-
-		echo "text";
-	}
 

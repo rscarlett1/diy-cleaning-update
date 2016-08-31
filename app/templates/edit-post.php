@@ -23,7 +23,7 @@
 		    	
 					<div class="form-group">
 						<label for"desc">Description</label>
-						<textarea  class="form-control" id="desc" name="description" cols"5" rows="10"><?= $post['description'] ?></textarea>
+						<textarea  class="form-control ckeditor" id="desc" name="description" cols"5" rows="10"><?= $post['description'] ?></textarea>
 						<?= isset($descError) ? $descError : '' ?>
 					</div>
 
@@ -31,7 +31,7 @@
 
 						<label for"method">Method</label>
 						
-						<textarea class="form-control" id="method" name="method" cols"80" rows="10"><?= $post['method'] ?></textarea>
+						<textarea class="form-control ckeditor" id="method" name="method" cols"80" rows="10"><?= $post['method'] ?></textarea>
 						<?= isset($methodError) ? $methodError : '' ?>
 					</div>
 

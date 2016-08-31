@@ -50,12 +50,11 @@ class EditPostController extends PageController{
 			$sql .= "AND user_id = $userID";
 		}
 		
-
 		$result = $this->dbc->query($sql);
 
 		//If the query failed
 		if(!$result || $result->num_rows == 0 ){
-			//Send the user back to the post page
+			//Send the user back to the recipe post page
 			//OR the post was deleted
 			header('Location: index.php?page=fullrecipepage&id=$recipeID');
 
@@ -167,12 +166,19 @@ class EditPostController extends PageController{
 
 					$image->save("img/uploads/recipes/$fileName$fileExtension");
 
+					$image->resize(800, null, function ($constraint) {
+					     $constraint->aspectRatio();
+					});
+
+					$image->save("img/uploads/post-size/$fileName$fileExtension");
+
 					unlink("img/uploads/original/$imageName");
+					unlink("img/uploads/post-size/$imageName");
 					unlink("img/uploads/recipes/$imageName");
+					
 
-					//Change the ImageName to be the new file names
+					//Change the ImageName to be the new file name
 					$imageName = $fileName.$fileExtension;
-
 				} 
 
 				//Filter the data

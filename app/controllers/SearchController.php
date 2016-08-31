@@ -20,6 +20,7 @@ class SearchController extends PageController{
 	}
 
 	public function getSearch(){
+		
 		if(strlen($_POST['search']) === 0){
 			$searchTerm = "";
 		} else {

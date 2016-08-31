@@ -376,8 +376,9 @@ nav ul.nav.navbar-nav li{
 }
 
 #recipe-post{
-	background-color: pink;
+	background-color: #e7ebed;
 	margin: 0 auto;
+	border: 1px grey solid ;
 }
 
 /*.comments-padding{
@@ -396,6 +397,35 @@ nav ul.nav.navbar-nav li{
 .subscribe-list{
 	display: block;
 	width: 400px;
+}
+
+#recipe-edit{
+	
+	width: 200px;
+	margin: 0 auto;
+}	
+
+#recipe-edit ul{
+	list-style-type: none;
+}
+
+.post-button{
+	margin-top: 10px; 
+}
+
+.post-changes{
+	margin: 5px;
+}
+
+.edit-post{
+	background-color: #e7ebed;
+	width: 900px;
+	border: 1px grey solid;
+	margin-bottom: 10px;
+}
+
+#edit-image{
+	padding-left: 250px;
 }
 
 

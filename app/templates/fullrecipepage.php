@@ -20,16 +20,22 @@
           <div class=" col-xs-12 col-sm-12 col-md-12">
               <div id="recipe-post"class="thumbnail">
 
-                <h1 class="comments-padding" id="full-recipe-heading"><?= htmlentities($fullrecipepage['title']) ?> </h1>
-
-                <p class="comments-padding"><?= htmlentities($fullrecipepage['description']) ?></p>
-
-                <p class="comments-padding"><?= htmlentities($fullrecipepage['method']) ?></p>
+              <div>
+                <h1 id="full-recipe-heading">
+                <?= ($fullrecipepage['title']) ?></h1>
+              </div>
+              
+              <div>
+              <?= ($fullrecipepage['description']) ?>
               </div>
 
-                <img img class="img-responsive" src="img/uploads/post-size/<?= $fullrecipepage['image'] ?>" alt="...">
+              <div>
+              <?= ($fullrecipepage['method']) ?>
+              </div>
+
+              <img img class="img-responsive" src="img/uploads/post-size/<?= $fullrecipepage['image'] ?>" alt="...">
       
-            <div class="caption">
+            <div class="caption" id="recipe-edit">
                   <ul>
                     <li><strong>Posted By: </strong><?= htmlentities($fullrecipepage['first_name'].' '.$fullrecipepage['last_name']) ?></li>
                     <?php
@@ -40,16 +46,15 @@
                           // You own post!
                         ?>
                 <li>
-                  <a href="index.php?page=edit-post&id=<?= $_GET['recipe_id'] ?>">Edit</a>
+                  <button class="btn btn-default post-changes btn-sm"><a href="index.php?page=edit-post&id=<?= $_GET['recipe_id'] ?>">Edit</a></button>
                 </li>
 
                 <li>
-                  <button class="delete-post">Delete</button></a>
+                  <button class="delete-post post-changes btn-sm btn btn-default">Delete</button></a>
                   
                     <div class="delete-post-options">
-                      <a href= "<?= $_SERVER['REQUEST_URI'] ?>&delete">Yes</a> / <button>No</button>
+                      <button class="btn btn-success post-button btn-xs"><a href= "<?= $_SERVER['REQUEST_URI'] ?>&delete">Yes</a></button> / <button class="btn btn-success btn-xs post-button">No</button>
                     </div>
-
                 </li>
                         <?php
                       }

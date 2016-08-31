@@ -4,12 +4,10 @@
         'title'=>'Edit recipe post',
         'desc'=>'Edit the post page that you uploaded to the webpage'
     ]);
-    var_dump($_SERVER['REQUEST_URI']);
-    var_dump($post);
-?>
+ ?>
 
 <article>
-	<div class="container">
+	<div class="container edit-post">
 	  <div class="row">
 	    <div class="col-xs-12" id="kitchen-posts">
 	    	<h1>Edit post: <?= htmlentities($originalTitle) ?></h1>
@@ -35,25 +33,18 @@
 						
 						<textarea class="form-control" id="method" name="method" cols"80" rows="10"><?= $post['method'] ?></textarea>
 						<?= isset($methodError) ? $methodError : '' ?>
-						
 					</div>
 
 					
-
-
 					<div class="form-group">
-						<img src="img/uploads/recipes/<?= $post['image'] ?>" name="image" for="image">
+						<img id="edit-image" src="img/uploads/recipes/<?= $post['image'] ?>" name="image" for="image">
 						<input type="file" name="image">
-
-		    			
-		    			
 					</div>
 
 					
 					<div class="form-group">
 					<input class="btn btn-default" type="submit" name="edit-post" value="Submit">
 					<?= isset($updateError) ? $updateError : '' ?>
-					
 					</div>
 				</form>
 	    	</div>	

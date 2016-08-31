@@ -43,9 +43,13 @@ class EditPostController extends PageController{
 		//Prepare the query
 		$sql = "SELECT user_id, title, description, method, image 
 				FROM recipe_database 
-				WHERE recipe_id = $recipeID ;"
+				WHERE recipe_id = $recipeID ";
+
 		if($_SESSION['privilege'] != 'admin'){		
+			
 			$sql .= "AND user_id = $userID";
+		}
+		
 
 		$result = $this->dbc->query($sql);
 

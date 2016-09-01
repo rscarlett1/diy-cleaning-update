@@ -1,4 +1,4 @@
-<?php
+a<?php
 
 class SearchController extends PageController{
 
@@ -25,7 +25,8 @@ class SearchController extends PageController{
 			$searchTerm = "";
 		} else {
 			$result = $_POST['search'];
-			$searchTerm = strtolower($result);
+			$UnFiltersearchTerm = strtolower($result);
+			$searchTerm = $this->dbc->real_escape_string($UnFiltersearchTerm);
 		}
 
 		$this->data['searchTerm'] = $searchTerm;

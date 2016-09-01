@@ -17,14 +17,16 @@
 <!-- When you are Logged in  -->
 <?php else: ?>
 
-	<div>	
-	<form action="index.php?page=search" id="search-bar" class="navbar-form navbar-left" method="post">
+<div class="container" id="search-bar">	
+	<div class="row col-xs-12" >
+		<form action="index.php?page=search" class="navbar-form navbar-left" method="post">
 			
 			 <input type="text" name="search" class="form-control" placeholder="Search for Recipes">
 			 
 			 <input type="submit" class="btn btn-primary btn-sm">
 		</form>
 	</div>
+</div>
 
 
 	<a href="index.php?page=logout"><button id="member" type="button" class="btn btn-primary" >Logout</button></a>

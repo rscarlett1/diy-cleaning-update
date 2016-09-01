@@ -39,18 +39,12 @@ nav ul.nav.navbar-nav li{
 	padding-left: 180px;
 }
 
-#search{
+#search-bar{
+	background-color: pink;
 	position: absolute;
 	top: 80px;
 	right: 485px;
 }
-
-#search-submit{
-	position: absolute;
-	top: 88px;
-	right: 430px;
-}
-
 
 #triangle{
 	position: absolute;

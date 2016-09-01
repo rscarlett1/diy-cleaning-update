@@ -183,7 +183,7 @@ class FullRecipeController extends PageController{
 
 		unlink("img/uploads/original/$filename");
 		unlink("img/uploads/recipes/$filename");
-
+		unlink("img/uploads/post-images/$filename");
 
 		// Prepare the SQL
 		$sql = "DELETE FROM recipe_database

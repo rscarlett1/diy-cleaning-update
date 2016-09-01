@@ -179,7 +179,10 @@ class EditPostController extends PageController{
 
 					//Change the ImageName to be the new file name
 					$imageName = $fileName.$fileExtension;
-				} 
+				}
+
+
+
 
 				//Filter the data
 				$title = $this->dbc->real_escape_string($title);
@@ -194,8 +197,8 @@ class EditPostController extends PageController{
 							description = '$desc',
 							image = '$imageName',
 							method = '$method'
-						WHERE recipe_id = '$recipeID ";
-						
+						WHERE recipe_id = '$recipeID' ";
+
 				if($_SESSION['privilege'] != 'admin') {
 					$sql .= "AND user_id = $userID'";
 				}

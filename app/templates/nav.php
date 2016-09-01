@@ -18,16 +18,13 @@
 <?php else: ?>
 
 	<div>	
-		<form id="search" class="navbar-form navbar-left" role="search">
-		<div class="form-group">
-		  	<input type="text" class="form-control" placeholder="Search">
-		 </div>
+	<form action="index.php?page=search" id="search-bar" class="navbar-form navbar-left" method="post">
+			
+			 <input type="text" name="search" class="form-control" placeholder="Search for Recipes">
+			 
+			 <input type="submit" class="btn btn-primary btn-sm">
 		</form>
 	</div>
-
-	<div id="search-submit">
-		<input class="btn btn-primary btn-sm" type="submit" name="submit" value="Submit">
-	</div>	
 
 
 	<a href="index.php?page=logout"><button id="member" type="button" class="btn btn-primary" >Logout</button></a>
@@ -35,3 +32,4 @@
 	<a href="index.php?page=account"><button id="member" type="button" class="btn btn-primary">My Account</button></a>
 	
 <?php endif; ?>
+

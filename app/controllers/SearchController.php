@@ -30,12 +30,20 @@ class SearchController extends PageController{
 
 		$this->data['searchTerm'] = $searchTerm;
 
-		$sql = "SELECT recipe_id, title AS score_title, description AS score_description
+		$sql = "SELECT recipe_id, title AS score_title, description AS score_description, method AS score_method
 				FROM recipe_database
 				WHERE 
 					title LIKE '%$searchTerm%' OR
-					description LIKE '%$searchTerm%'
+					description LIKE '%$searchTerm%' OR method LIKE '%$searchTerm%' 
 				ORDER BY score_title ASC";
+
+		//$sql = "SELECT recipe_id, title AS score_title, description AS score_description
+				//FROM recipe_database
+				//WHERE 
+					//title LIKE '%$searchTerm%' OR
+					//description LIKE '%$searchTerm%'
+				//ORDER BY score_title ASC";
+		//die($sql);
 
 		$result = $this->dbc->query($sql);
 
@@ -46,3 +54,5 @@ class SearchController extends PageController{
 		}
 
 	}
+
+}

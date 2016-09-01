@@ -7,6 +7,7 @@
 
  ?>
 
+?>
  <main>
 
 	<h1>Search Results for "<i><?= $this->e( $searchTerm ) ?></i>"</h1>

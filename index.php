@@ -90,6 +90,11 @@ switch($page) {
 		$controller = new EditPostController ($dbc);
 	break;
 
+	case 'search':
+		require 'app/controllers/SearchController.php';
+		$controller = new SearchController ($dbc);
+	break;
+
 	case 'logout':
 		unset($_SESSION['user_id']);
 		header('Location: index.php');

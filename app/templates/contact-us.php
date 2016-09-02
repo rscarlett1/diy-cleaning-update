@@ -6,16 +6,17 @@
 	]) 
 
 ?>
-
-
-<main>	
-	<div class="row">
+<main>
+	<div class="container">
+		<div class="row">
 			 <div id="contact-heading" class="col-xs-12 center-image">
 			 	<h1>Contact Us</h1>
 			 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate possimus est nisi necessitatibus corporis, deserunt, ad nihil nemo error doloremque eligendi neque nam quas explicabo ratione totam placeat consequatur commodi.</p>
 			</div>
 		</div>
+	</div>
 
+	<div class="container">
 		<div class="row">
 			 <div class="col-xs-6">
 			 	<form id="query-form">
@@ -55,9 +56,7 @@
 
 				<img src="img/contact-us/map.png" height=400 width=400 alt="map">
 			</div>
-
 		</div>
-
-		<div class="row">
-		 
 	</div>
+
+		

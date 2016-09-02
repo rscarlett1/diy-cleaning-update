@@ -83,7 +83,6 @@ class EditPostController extends PageController{
 			}
 
 		}
-
 	}
 
 	private function processPostEdit() {
@@ -125,9 +124,6 @@ class EditPostController extends PageController{
 					$totalErrors++;
 				}
 			}
-
-
-
 
 			//If there are no errors
 			if( $totalErrors == 0 ) {
@@ -244,8 +240,7 @@ class EditPostController extends PageController{
 		}
 
 	}
-
-	}
+}
 
 
 

@@ -39,6 +39,7 @@ class EditCommentsController extends PageController{
 				FROM comments 
 				WHERE comments.id = $commentID
 				AND comments.user_id = $userID ";
+
 		// If the user is not an admin
 		if( $privilege != 'admin' ) {
 			$sql .= " AND user_id = $userID";
@@ -50,7 +51,7 @@ class EditCommentsController extends PageController{
 		//if there is not a result
 		if(!$result || $result->num_rows == 0 ){
 			header('Location: index.php?page=what-to-clean');
-		}else{
+		} else{
 			$theComment = $result->fetch_assoc();
 
 			$this->data['comment'] = $theComment['comment'];
@@ -90,6 +91,4 @@ class EditCommentsController extends PageController{
 		}
 
 	}
-
-
 }

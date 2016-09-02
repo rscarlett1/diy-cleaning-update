@@ -24,7 +24,6 @@ class AccountController extends PageController{
 		if( isset($_POST['submit-recipe']) ){
 			$this->processUploadedRecipe();
 		}
-
 	}
 
 	public function buildHTML() {
@@ -181,15 +180,7 @@ class AccountController extends PageController{
 	}
 			
 
-			
-
-		
-
-			
-
-	
-
-	private function getFileExtension( $mimeType ) {
+		private function getFileExtension( $mimeType ) {
 
 		switch($mimeType) {
 
@@ -214,9 +205,4 @@ class AccountController extends PageController{
 			break;
 		}
 	}
-
-
-
-
-
 }

@@ -20,8 +20,7 @@
 <div class="container" id="search-bar">	
 	<div class="row col-xs-12" >
 		<form action="index.php?page=search" class="navbar-form navbar-left" method="post">
-			
-			 <input type="text" name="search" class="form-control" placeholder="Search for Recipes">
+			<input type="text" name="search" class="form-control ckeditor" placeholder="Search for Recipes">
 			 
 			 <input type="submit" class="btn btn-primary btn-sm">
 		</form>

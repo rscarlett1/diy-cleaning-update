@@ -4,9 +4,6 @@
         'title'=>'Recipe page',
         'desc'=>'A recipe how to make the cleaner'
     ]); 
-
-
-    
 ?>
 
 
@@ -42,9 +39,9 @@
 
                       if( isset($_SESSION['user_id']) ) {
 
-                        if( $_SESSION['user_id'] == $fullrecipepage['user_id'] ){
+                      if( $_SESSION['user_id'] == $fullrecipepage['user_id'] ){
                           // You own post!
-                        ?>
+                    ?>
                 <li>
                   <button class="btn btn-default post-changes btn-sm"><a href="index.php?page=edit-post&id=<?= $_GET['recipe_id'] ?>">Edit</a></button>
                 </li>
@@ -70,7 +67,6 @@
       <?php endforeach; ?>
   </div>
 
- <?php var_dump($allComments) ?>
 
 <section>
     <div class="container">

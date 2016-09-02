@@ -28,16 +28,15 @@
 
 			<div class="col-xs-4 center-image">
 
-				<div class="centre-image">	
-				<img src="img/advertising/food-promo.png" height="200" width="200"alt="healthly food advertising" class="centre-image">
-				</div>
-
-				<div row>
-
-					<div>
-					<img src="img/advertising/hand-soap.png" height="200" width="200" alt="healthly food advertising" class="centre-image">
-					</div>
-				</div>	
+			<div class="centre-image">	
+			<img src="img/advertising/food-promo.png" height="200" width="200"alt="healthly food advertising" class="centre-image">
 			</div>
+
+			<div class="row">
+				<div>
+				<img src="img/advertising/hand-soap.png" height="200" width="200" alt="healthly food advertising" class="centre-image">
+				</div>
+			</div>	
 		</div>
 	</div>
+</div>

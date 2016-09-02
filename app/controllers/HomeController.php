@@ -5,7 +5,6 @@ class HomeController extends PageController {
 	//Properties
 	private $emailMessage;
 	
-
 	//Constructor
 	public function __construct($dbc){
 
@@ -14,7 +13,6 @@ class HomeController extends PageController {
 	}
 
 	//Methods (functions)
-
 	public function buildHTML() {
 
 		//Instantiate (create instance of) Plates library
@@ -22,5 +20,4 @@ class HomeController extends PageController {
 
 		echo $plates->render('home');
 	}
-
 }

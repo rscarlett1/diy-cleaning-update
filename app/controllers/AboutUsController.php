@@ -2,7 +2,6 @@
 
 class AboutUsController extends PageController{
 
-
 	public function __construct($dbc){
 
 		//Run the parent constructer
@@ -18,6 +17,4 @@ class AboutUsController extends PageController{
 
 		echo $this->plates->render('about-us');
 	}
-
-	
 }

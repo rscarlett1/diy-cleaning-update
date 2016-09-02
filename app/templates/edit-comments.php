@@ -6,7 +6,7 @@
     ]); 
 ?>
 
-
+<main>
 	<form class="form-group" action="<?= $_SERVER['REQUEST_URI'] ?>" method="post">
 	
 		<h1>Edit your comment</h1>

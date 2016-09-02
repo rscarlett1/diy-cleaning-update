@@ -2,7 +2,6 @@
 
 class LoginController extends PageController{
 
-
 	public function __construct($dbc){
 
 		//Make sure the PageControllers constructer still runs
@@ -89,8 +88,6 @@ class LoginController extends PageController{
 		}
 
 	}
-
-
 }
 
 

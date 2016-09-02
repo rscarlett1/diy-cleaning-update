@@ -2,7 +2,6 @@
 
 class FullRecipeController extends PageController{
 
-
 	public function __construct($dbc){
 
 		//Run the parent constructer
@@ -58,8 +57,6 @@ class FullRecipeController extends PageController{
 		} else {
 			//yay all good
 			$this->data['fullrecipepage'] = $result->fetch_all(MYSQLI_ASSOC);
-
-			
 		}
 
 		//Get all the comments
@@ -76,8 +73,6 @@ class FullRecipeController extends PageController{
 		
 		$this->data['allComments'] = $result->fetch_all(MYSQLI_ASSOC);
 	}
-
-
 
 	private function getRecipePage(){
 
@@ -145,7 +140,6 @@ class FullRecipeController extends PageController{
 		}
 	}
 
-
 	private function deletePost() {
 
 		// If user is not logged in
@@ -196,7 +190,6 @@ class FullRecipeController extends PageController{
 		// This recipe is dead :(
 		header('Location: index.php?page=what-to-clean');
 		die();
-		
 	}
 
 	private function Deletecomment(){
@@ -247,18 +240,9 @@ class FullRecipeController extends PageController{
 		if( $privilege != 'admin' ) {
 			$sql .= " AND user_id = $userID";
 		}
-		$this->dbc->query($sql);
-			
-		//Make sure query worked
-			//if( $this->dbc->affected_rows ) {
-				//$this->data['recipeCommentMessage'] = 'Success!';
-			//} else {
-				//$this->data['recipeCommentMessage'] = 'Something went wrong!';
-			//}		
-		}
 
-
-
+		$this->dbc->query($sql);	
+	}
 }
 
 

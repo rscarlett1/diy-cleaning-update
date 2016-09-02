@@ -2,7 +2,6 @@
 
 class Error404Controller extends PageController{
 
-
 	public function __construct($dbc){
 
 		//Run the parent constructer

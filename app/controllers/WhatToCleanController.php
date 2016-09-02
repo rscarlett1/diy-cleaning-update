@@ -2,26 +2,16 @@
 //child controller
 class WhatToCleanController extends PageController{
 
-	//Properties
-
-
-	//Constructor
-
-	//Methods (functions)
-
 	public function __construct($dbc){
 
 		//Run the parent constructer
-
 		parent::__construct();
 		
 		$this->dbc = $dbc;
 
 		//If you are not logged in (no id in the SESSION not logged in) 
-		//Can be cipped to other pages thatthey have no access too
+		//Can be cipped to other pages that they have no access too
 		$this->mustBeLoggedIn();
-
-
 	}
 
 	public function buildHTML() {
@@ -33,13 +23,4 @@ class WhatToCleanController extends PageController{
 
 		echo $this->plates->render('what-to-clean');
 	}
-
-	
-
-
-
-
-
-
-	
 }

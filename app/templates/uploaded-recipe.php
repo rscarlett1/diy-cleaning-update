@@ -4,14 +4,10 @@
         'title'=>'Recipe Upload page',
         'desc'=>'displays an uploaded image'
     ]); 
-
-
-    
 ?>
 
 
 <main>
-
 
 <div class="container">
   <div class="row">

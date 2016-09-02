@@ -19,5 +19,4 @@ class ContactUsController extends PageController{
 		echo $this->plates->render('contact-us');
 	}
 
-	
 }

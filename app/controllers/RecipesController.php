@@ -11,18 +11,11 @@ class RecipesController extends PageController{
 		$this->dbc = $dbc;
 
 		$this->getLatestRecipes();
-
-	
 	}
 
 	public function buildHTML() {
 		//Instantiate (create instance of) Plates library
 		$plates = new League\Plates\Engine('app/templates');
-
- 	// 	$allData = $this->getLatestRecipes();
-		// $data = [];
-
-		// $data['recipes'] = $allData;
 
 		echo $this->plates->render('recipes', $this->data);
 	}
@@ -52,24 +45,7 @@ class RecipesController extends PageController{
 			// Yay!
 			$this->data['recipes'] = $result->fetch_all(MYSQLI_ASSOC);
 		}
-
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 	private function getuUsersDetails(){
@@ -97,8 +73,5 @@ class RecipesController extends PageController{
 			// Yay!
 			$this->data['recipes'] = $result->fetch_all(MYSQLI_ASSOC);
 		}
-
-
 	}
-
 }

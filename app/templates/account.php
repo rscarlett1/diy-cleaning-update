@@ -8,15 +8,11 @@
 ?>
 
 <main>
-
-
 <article>
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12 image-align-center" id="">
-				
-
-					<form action="index.php?page=account" id="account-details" method="post">
+				<form action="index.php?page=account" id="account-details" method="post">
 		 				<div class="row container">
 			    			<div class="col-xs-12 image-align-center" >
 			    				<h1 id="heading-acc">Account Profile</h1>	
@@ -44,14 +40,13 @@
 							</div>
 						</div>	
 					</form>
+				</div>
 			</div>
-		</div>
-	</div>	
+		</div>	
 </article>
 <br>
 <br>
 </br>
-
 
 <article>
 	<div class="container">

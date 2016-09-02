@@ -1,13 +1,6 @@
 <?php
 //child controller
 
-//echo 'pre';
-//print_r( $_POST );
-//echo '</pre>';
-
-//var_dump($_POST);
-
-
 class SignUpController extends PageController {
 
 	//Properties
@@ -16,11 +9,9 @@ class SignUpController extends PageController {
 	private $emailMessage;
 	private $passwordMessage;
 	
-
 	//Constructor
-
 	public function __construct($dbc){
-		//Rin  the parent constructor
+		//Run  the parent constructor
 		parent::__construct();
 
 		//Save the database connnection for later
@@ -57,11 +48,6 @@ class SignUpController extends PageController {
 		if($this->passwordMessage != '') {
 			$data['passwordMessage'] = $this->passwordMessage;
 		}
-		
-		//validateRegistrationForm();
-		
-		//echo $plates->render('what-to-clean', $data);
-
 	}
 
 	public function validateRegistrationForm(){
@@ -122,43 +108,28 @@ class SignUpController extends PageController {
 			header('Location: index.php?page=what-to-clean');
 		}		
 	}
-
-	//Methods (functions)
-	public function registerAccount() {
-
-	//Validate the users data
-
-	//check the database to see if emails is in use
-
-	//check the strength of the password
-
-	//Register the account OR show error messages
-
-	//If successful, log user in and redirect to recipes pages
-
-
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

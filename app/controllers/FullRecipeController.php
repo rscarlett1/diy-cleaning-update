@@ -19,7 +19,6 @@ class FullRecipeController extends PageController{
 			$this->Deletecomment();
 		}
 
-		
 		//Did the user add a comment
 		if( isset( $_POST['new-comment'])){
 			$this->processNewComment();
@@ -66,9 +65,9 @@ class FullRecipeController extends PageController{
 		ON comments.user_id = users.user_id
 		WHERE recipe_id = '$fullrecipeID'
 		ORDER BY ceated_at DESC";
-
+		
 		$result = $this->dbc->query($sql);
-
+		
 		//Extract the data as an associative array
 		
 		$this->data['allComments'] = $result->fetch_all(MYSQLI_ASSOC);
@@ -106,7 +105,6 @@ class FullRecipeController extends PageController{
 		// Validate the comment
 		//validate the minimum length	
 		if( strlen($_POST['comment']) > 50 ) {
-			var_dump($_POST);
 			$this->data['commentMessage'] = '<p>Must be at most 50 characters</p>';
 			$totalErrors++;
 		}

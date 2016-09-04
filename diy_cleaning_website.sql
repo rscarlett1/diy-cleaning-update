@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 01, 2016 at 10:26 AM
+-- Generation Time: Sep 04, 2016 at 11:02 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.21
 
@@ -35,6 +35,15 @@ CREATE TABLE `comments` (
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `comments`
+--
+
+INSERT INTO `comments` (`id`, `comment`, `user_id`, `recipe_id`, `ceated_at`, `updated_at`) VALUES
+(1, 'great recipe', 3, 53, '2016-09-03 22:27:15', '2016-09-03 22:27:15'),
+(2, 'great easy cleaning', 3, 59, '2016-09-03 23:34:58', '2016-09-03 23:34:58'),
+(3, 'Cleans well.', 3, 57, '2016-09-04 02:06:02', '2016-09-04 02:06:02');
+
 -- --------------------------------------------------------
 
 --
@@ -65,7 +74,9 @@ INSERT INTO `recipe_database` (`recipe_id`, `user_id`, `title`, `description`, `
 (54, 3, 'Marble Cleaner', '<p><em>Great for:</em>&nbsp;Natural stone countertops</p>', 'Kitchen', '<p><em>Ingredients</em><br />\r\n&bull; A drop or two of mild dishwashing liquid (non-citrus-scented)<br />\r\n&bull; 2 cups warm water</p>\r\n\r\n<p><em>How to use:</em>&nbsp;Mix the detergent and water. Sponge over marble and rinse completely to remove any soap residue. Buff with a soft cloth; do not let the marble air-dry. Caution: Never use vinegar, lemon, or any other acidic cleaner on marble or granite surfaces; it will eat into the stone.</p>', '57c7ac535449d.jpg', 'Pending'),
 (55, 3, 'Brass Cleaner', '<p><em>Great for:</em>&nbsp;Non-lacquered cabinet pulls, bathroom appointments, and more</p>', 'Other', '<p><em>Ingredients</em><br />\r\n&bull; White vinegar or lemon juice<br />\r\n&bull; Table salt</p>\r\n\r\n<p><em>How to use:</em>&nbsp;Dampen a sponge with vinegar or lemon juice, then sprinkle on salt. Lightly rub over surface. Rinse thoroughly with water, then immediately dry with a clean soft cloth.</p>', '57c7aeffb14a8.jpg', 'Pending'),
 (56, 3, 'Cleaning the Toilet Without Harsh Chemicals', '<p>Cleaning the toilet without using harsh chemicals.</p>\r\n\r\n<p>&nbsp;</p>', 'Other', '<p>Just sprinkle a little baking soda in and give it a quick once or two around. If you add some essential oils to the baking soda, about 20+ drops, like tea tree oil for it&rsquo;s anti-bacterial qualities and lemon or another scent that you like, it boosts the cleaning power and adds a nice, clean-smelling scent.</p>\r\n\r\n<p>Just sprinkle a little baking soda in and give it a quick once or two around. If you add some essential oils to the baking soda, about 20+ drops, like tea tree oil for it&rsquo;s anti-bacterial qualities and lemon or another scent that you like, it boosts the cleaning power and adds a nice, clean-smelling scent.</p>', '57c7b16901ec5.jpg', 'Pending'),
-(57, 3, 'NonÂ ToxicÂ Disinfectant', '<p>Great alternative to the real thing.</p>', 'Other', '<p>Ingredients</p>\r\n\r\n<p>16 oz. water<br />\r\n3 tbsp. liquid castile soap<br />\r\n30 drops tea tree oil<br />\r\nMix together in a spray bottle.</p>\r\n\r\n<p>There are many, many ways you can make a non-toxic disinfectant if you don&rsquo;t have these ingredients on hand.&nbsp; (I order my ingredients from&nbsp;<a href="https://www.vitacostrewards.com/7vC6aQw" target="_blank" title="Vitacost">Vitacost</a>&nbsp;since they have great prices, plus you get a $10 off $30 coupon when you create an account through&nbsp;<a href="https://www.vitacostrewards.com/7vC6aQw" target="_blank" title="Vitacost">my referral link</a>. )</p>\r\n\r\n<p>Other non-toxic products with disinfecting properties:</p>\r\n\r\n<p>Vinegar water (50/50 ratio) (do not use on marble surfaces)</p>\r\n\r\n<p>Hydrogen Peroxide (3 percent; if you want to spray it, you must use a dark spray bottle or screw the nozzle from another spray bottle directly onto the original peroxide bottle.) (Use vinegar and peroxide in conjunction with one another.)</p>\r\n\r\n<p>Thieves Oil</p>', '57c7b2a158e61.jpg', 'Pending');
+(57, 3, 'NonÂ ToxicÂ Disinfectant', '<p>Great alternative to the real thing.</p>', 'Bathroom', '<p>Ingredients</p>\r\n\r\n<p>16 oz. water<br />\r\n3 tbsp. liquid castile soap<br />\r\n30 drops tea tree oil<br />\r\nMix together in a spray bottle.</p>\r\n\r\n<p>There are many, many ways you can make a non-toxic disinfectant if you don&rsquo;t have these ingredients on hand.&nbsp; (I order my ingredients from&nbsp;<a href="https://www.vitacostrewards.com/7vC6aQw" target="_blank" title="Vitacost">Vitacost</a>&nbsp;since they have great prices, plus you get a $10 off $30 coupon when you create an account through&nbsp;<a href="https://www.vitacostrewards.com/7vC6aQw" target="_blank" title="Vitacost">my referral link</a>. )</p>\r\n\r\n<p>Other non-toxic products with disinfecting properties:</p>\r\n\r\n<p>Vinegar water (50/50 ratio) (do not use on marble surfaces)</p>\r\n\r\n<p>Hydrogen Peroxide (3 percent; if you want to spray it, you must use a dark spray bottle or screw the nozzle from another spray bottle directly onto the original peroxide bottle.) (Use vinegar and peroxide in conjunction with one another.)</p>\r\n\r\n<p>Thieves Oil</p>', '57c7b2a158e61.jpg', 'Pending'),
+(58, 3, 'Mold and Mildrew Remover', '<p>Remove Mould and mildew&nbsp;from your ceilings</p>', 'Other', '<p>Mix&nbsp;<strong>1/2 cup borax</strong>&nbsp;and&nbsp;<strong>1/2 cup vinegar</strong>&nbsp;to make a paste. Scrub with a brush or sponge and rinse with water. For tough mold, let it sit for an hour before rinsing with water.</p>', '57cb58ad0ed54.jpg', 'Pending'),
+(59, 3, 'SOAP SCUM REMOVER:', '<p>Easily get rid of soap scum build up.</p>', 'Bathroom', '<p>Sprinkle on&nbsp;<strong>baking soda</strong>, scrub with a cloth or sponge, and rinse.&nbsp;<strong>Vinegar</strong>&nbsp;or&nbsp;<strong>kosher salt</strong>&nbsp;also work.</p>', '57cb5a122ce25.jpg', 'Pending');
 
 -- --------------------------------------------------------
 
@@ -127,12 +138,12 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `recipe_database`
 --
 ALTER TABLE `recipe_database`
-  MODIFY `recipe_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+  MODIFY `recipe_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 --
 -- AUTO_INCREMENT for table `users`
 --

@@ -23,9 +23,9 @@
               </div>
               
               <div>
-              <?= ($fullrecipepage['description']) ?>
+             <strong><?= ($fullrecipepage['description']) ?></strong>
               </div>
-
+              <br>
               <div>
               <?= ($fullrecipepage['method']) ?>
               </div>
@@ -44,6 +44,7 @@
                     ?>
                 <li>
                   <button class="btn btn-default post-changes btn-sm"><a href="index.php?page=edit-post&id=<?= $_GET['recipe_id'] ?>">Edit</a></button>
+                </li>
                 </li>
 
                 <li>
@@ -71,7 +72,7 @@
 <section>
     <div class="container">
       <div class="row">
-         <div class=" col-xs-12 col-sm-12 col-md-12"> 
+         <div class="col-xs-12 col-sm-12 col-md-12"> 
          
             <form class="form-group" action="index.php?page=fullrecipepage&recipe_id=<?= $_GET['recipe_id'] ?>" method="post">
             
@@ -79,7 +80,7 @@
               
                 <div class="form-group comments-padding">
                   <label for="comment">Please write a comment: </label>
-                  <textarea class="form-control" name="comment" id="comment" cols="30" rows="5"></textarea>
+                  <textarea class="form-control ckeditor" name="comment" id="comment" cols="30" rows="5"></textarea>
                 </div>
 
                 <?= isset($commentMessage) ? $commentNameMessage : '' ?>
@@ -92,11 +93,12 @@
             </form>
 
 
-
+          <?php var_dump($allcomments) ?>
 
             <?php foreach($allComments as $comment): ?>
 
-            <article> 
+            <article id="edit-dot">
+                <h2>Posted Comments</h2> 
                 <p><?= htmlentities($comment['comment']) ?> </p>
                 <small>Written by: <?= htmlentities($comment['author']) ?></small>
 
@@ -109,11 +111,11 @@
                   
                   ?>
                     <li>
-                      <a href="index.php?page=edit-comments&id=<?= $_GET['recipe_id'] ?>">Edit</a>
+                      <a href="index.php?page=edit-comments&id=<?= $_GET['recipe_id'] ?>"><button class="btn btn-success post-button btn-xs">Edit</button></a>
                     </li>
-
+                      
                     <li>
-                      <button class="delete-post">Delete</button></a>
+                      <a><button class="delete-post btn btn-success post-button btn-xs">Delete</button></a>
                       
                         <div class="delete-post-options">
                           <a href= "<?= $_SERVER['REQUEST_URI'] ?>&deleteComment&commentid=<?=$comment['id']?>">Yes</a> / <button>No</button>

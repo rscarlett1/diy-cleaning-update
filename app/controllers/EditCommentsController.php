@@ -50,7 +50,7 @@ class EditCommentsController extends PageController{
 
 		//if there is not a result
 		if(!$result || $result->num_rows == 0 ){
-			header('Location: index.php?page=what-to-clean');
+			header('Location: index.php?page=fullrecipepage&recipe_id=[recipe_id]');
 		} else{
 			$theComment = $result->fetch_assoc();
 

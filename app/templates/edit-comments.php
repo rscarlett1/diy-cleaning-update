@@ -11,7 +11,7 @@
 	
 		<h1>Edit your comment</h1>
 		<label for="comment">Comment: </label>
-		<textarea name="comment" id="comment" cols="30" rows="10"><?= $comment ?></textarea>
+		<textarea class="ckeditor" name="comment" id="comment" cols="30" rows="10"><?= $comment ?></textarea>
 		
 		<?= isset($commentError) ? $commentError : '' ?>
 

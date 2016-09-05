@@ -41,7 +41,7 @@ class AccountController extends PageController{
 
 		// Validate the first name
 		if( strlen($_POST['first-name']) > 50 ) {
-			var_dump($_POST);
+			
 			$this->data['firstNameMessage'] = '<p>Must be at most 50 characters</p>';
 			$totalErrors++;
 		}
@@ -66,15 +66,15 @@ class AccountController extends PageController{
 			$sql = "UPDATE users
 					SET first_name = '$firstName',
 						last_name = '$lastName'
-					WHERE id = $userID  ";
-
+					WHERE users.user_id = $userID  ";
+			
 			// Run the query
 			$this->dbc->query( $sql );
 
 			if( $this->dbc->affected_rows ) {
-				$this->data['recipeUploadMessage'] = 'Success!';
+				$this->data['postMessage'] = 'Success!';
 			} else {
-				$this->data['recipeUploadMessage'] = 'Something went wrong!';
+				$this->data['postMessage'] = 'Something went wrong!';
 			}
 		}
 	}

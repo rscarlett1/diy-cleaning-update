@@ -143,10 +143,10 @@
 
 		  <div class="enter-details">
 		    <label><b>Email</b></label>
-		    <input type="text" placeholder="Email Address" name="email">
+		    <input type="text" placeholder="Email Address" name="email" value="<?= isset($_POST['email']) ? $_POST ['email'] : '' ?>">
 
 			<label><b>Password</b></label>
-		    <input type="password" placeholder="Enter Password" name="password">
+		    <input type="password" placeholder="Enter Password" name="password" value="<?= isset($_POST['password']) ? $_POST ['password'] : '' ?>">
 			
 			<button type="submit" name="new-account">Login</button>
 		    <input type="checkbox" checked="checked"> Remember me
@@ -177,43 +177,28 @@
 		  	<span id="name-message"></span>
 		  </div>
 
-		   <!--<?php //if(isset($firstNameMessage) ) : ?>
-			<p><?= $firstNameMessage ?></p>	
-			<?php //endif; ?> -->
-
+		   
 		  <div class="form-group">
 		    <label for="last-name">Last Name</label>
 		    <input type="text" class="form-control" id="last-name" placeholder="First Name" name="last-name" value="<?= isset($_POST['last-name']) ? $_POST ['last-name'] : '' ?>">
 		  	<span id="last-name-message"></span>
 		  </div>
 
-		   <!--<?php //if(isset($lastNameMessage) ) : ?>
-			<p><?= $lastNameMessage ?></p>	
-			<?php //endif; ?> -->
-
-
+		   
 		  <div class="form-group">
 		    <label for="exampleInputEmail1"> Your Email address</label>
 		    <input type="email" class="form-control" id="email" placeholder="Email" name="email" value="<?= isset($_POST['email']) ? $_POST ['email'] : '' ?>">
 		  	<span id="email-name-message"></span>
 		  </div>
 
-		  <!--<?php //if(isset($emailMessage) ) : ?>
-			<p><?= $emailMessage ?></p>	
-			<?php //endif; ?> -->
-
-
+		  
 		  <div class="form-group">
 		    <label for="exampleInputPassword1">Enter Password</label>
 		    <input type="password" class="form-control" id="password-first" placeholder="Password" name="password" value="<?= isset($_POST['password']) ? $_POST ['password'] : '' ?>">
 		  	<span id="password-name-message"></span>
 		  </div>
 
-		  <!--<?php //if(isset($passwordMessage) ) : ?>
-			<p><?= $passwordMessage ?></p>	
-			<?php //endif; ?> -->
-
-			<div class="form-group">
+		 <div class="form-group">
 		    <label for="exampleInputPassword1">Confirm Password</label>
 		    <input type="password" class="form-control" id="password-confirm" placeholder="Password" name="password-confirm" value="<?= isset($_POST['password']) ? $_POST ['password'] : '' ?>">
 		  	<span id="password-confirm-message"></span>

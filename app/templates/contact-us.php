@@ -22,23 +22,23 @@
 			 	<form id="query-form">
 				  <div class="form-group">
 				    <label for="first-name">First Name:</label>
-				    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="First Name">
+				    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="First Name" name=first-name value="<?= isset($_POST['first-name']) ? $_POST ['first-name'] : '' ?>">
 				  </div>
 				  <div class="form-group">
 				    <label for="last-name">Last Name:</label>
-				    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Last Name">
+				    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Last Name" name="last-name value="<?= isset($_POST['last-name']) ? $_POST ['last-name'] : '' ?>"">
 				  </div>
 				  <div class="form-group">
 				    <label for="email">Email:</label>
-				    <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Email Address">
+				    <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Email Address" name="email" value="<?= isset($_POST['email']) ? $_POST ['email'] : '' ?>">
 				  </div>
 				  <div class="form-group">
 				    <label for="subject">Subject:</label>
-				    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Subject">
+				    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Subject" name="subject" value="<?= isset($_POST['subject']) ? $_POST ['subject'] : '' ?>">
 				  </div>
 				  <div class="form-group">
 				  	<label for="message">Message:</label>
-				  	<textarea class="form-control" rows="6"></textarea>
+				  	<textarea class="form-control ckeditor" rows="6"></textarea>
 				  </div>
 				 <div class="form-group">	
 				  <button type="submit" class="btn btn-default">Submit</button>

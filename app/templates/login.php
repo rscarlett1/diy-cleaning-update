@@ -23,7 +23,7 @@
 
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control input-details" id="input-email" name="email" placeholder="Email" value="<?= isset($_POST['login']) ? $_POST['email'] : '' ?>">
+            <input type="email" class="form-control input-details" id="input-email" name="email" placeholder="Email" value="<?= isset($_POST['email']) ? $_POST['email'] : '' ?>">
           </div>
 
           <?php if( isset ($emailMessage) ):  ?>

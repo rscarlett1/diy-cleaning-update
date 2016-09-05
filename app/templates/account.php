@@ -21,7 +21,7 @@
 
 								<div class="form-group">
 									<label for="">First Name: </label>
-									<input class="form-control" type="text" name="first-name" value="<?= isset($_POST['update-contact']) ? $_POST['first-name'] : '' ?>">
+									<input class="form-control" type="text" name="first-name" value="<?= isset($_POST['first-name']) ? $_POST['first-name'] : '' ?>">
 								</div>
 								<br>                            
 
@@ -29,7 +29,7 @@
 
 								<div class="form-group">	
 								<label for="">Last Name: </label>
-								<input class="form-control" type="text" name="last-name" value="<?= isset($_POST['update-contact']) ? $_POST['last-name'] : '' ?>">
+								<input class="form-control" type="text" name="last-name" value="<?= isset($_POST['last-name']) ? $_POST['last-name'] : '' ?>">
 								</div>
 								<br>
 

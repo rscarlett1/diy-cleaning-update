@@ -6,6 +6,8 @@
     ]);
  ?>
 
+<main>
+
 <article>
 	<div class="container edit-post">
 	  <div class="row">

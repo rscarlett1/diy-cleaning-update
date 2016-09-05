@@ -26,16 +26,6 @@
 
 <body>
 
-<?php
-
-	if(isset($_SESSION['user_id'])){
-		var_dump("you are logged in");
-	} else {
-		var_dump("You are looged Out");
-	}
-
-
- ?>
 <div class="container-fluid">
 	<div class="row" id="logo">
 
@@ -77,7 +67,6 @@
 <?php echo $this->section('content') ?>
 
 <footer>
-
 	<div class="fluid-container">
 		<div class="row" id="footer-background">
 				
@@ -97,19 +86,19 @@
 				</div>
 			</div>
 
-		<div class="col-md-4">
-			<div id="navigate">
-							<ul class="list-unstyled">
-				  			<li><strong>Navigate Our Website</strong></li>
-				  			<br>
-				  			
-				  			<li><a href="index.php?page=about-us">About Us</a></li>
-				  			<li><a href="index.php?page=contact-us">Contact Us</a></li>
-				  			<li><a href="#">Archived Posts</a></li>
-				  			<li><a href="#">Terms and Conditions</a></li>
-							</ul>	
+			<div class="col-md-4">
+				<div id="navigate">
+								<ul class="list-unstyled">
+					  			<li><strong>Navigate Our Website</strong></li>
+					  			<br>
+					  			
+					  			<li><a href="index.php?page=about-us">About Us</a></li>
+					  			<li><a href="index.php?page=contact-us">Contact Us</a></li>
+					  			<li><a href="#">Archived Posts</a></li>
+					  			<li><a href="#">Terms and Conditions</a></li>
+								</ul>	
+				</div>
 			</div>
-		</div>
 
 			<div class= "col-md-4">
 				<div id="subscribe">
@@ -231,7 +220,7 @@
 		  </div>
 		  
 		  <input type="hidden" name="signup-submit">
-		  <input type="submit" id="signup-submit" class="btn btn-default" value="Submit">
+		  <input type="submit" class="btn btn-default" value="Submit">
 		  <span id="form-message" class="messages"></span>
 
 	</form>

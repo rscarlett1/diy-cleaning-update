@@ -118,7 +118,6 @@ nav ul.nav.navbar-nav li{
 	background-color: #c0e4f5;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	border-radius: 7px;
 }
 
 #address{
@@ -368,7 +367,7 @@ nav ul.nav.navbar-nav li{
 
 .subscribe-list{
 	display: block;
-	width: 400px;
+	width: 350px;
 }
 
 #recipe-edit{
@@ -415,8 +414,25 @@ nav ul.nav.navbar-nav li{
 	border: 1px solid grey;
 }
 
+#edit-comment-summit{
+	margin-top: 10px;
+}
 
+#format-comments{
+	padding: 30px;
+}
 
+#format-comments h1{
+	color: #ffdd00;
+}
+
+.carousel-control{
+	opacity: 0;
+} 
+
+.dropdown-menu{
+	padding: 0;
+}
 
 
 

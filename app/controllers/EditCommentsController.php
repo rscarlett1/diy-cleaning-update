@@ -32,7 +32,8 @@ class EditCommentsController extends PageController{
 		$userID =$_SESSION['user_id'];
 
 		//Get the comment ID
-		$commentID = $this->dbc->real_escape_string($_GET['id']);
+		$commentID = $this->dbc->real_escape_string($_GET['commentid']);
+		$privilege = $_SESSION['privilege'];
 
 		//Get the comment details
 		$sql = "SELECT comment, recipe_id

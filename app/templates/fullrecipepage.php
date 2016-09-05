@@ -93,9 +93,7 @@
             </form>
 
 
-          <?php var_dump($allcomments) ?>
-
-            <?php foreach($allComments as $comment): ?>
+          <?php foreach($allComments as $comment): ?>
 
             <article id="edit-dot">
                 <h2>Posted Comments</h2> 
@@ -111,7 +109,7 @@
                   
                   ?>
                     <li>
-                      <a href="index.php?page=edit-comments&id=<?= $_GET['recipe_id'] ?>"><button class="btn btn-success post-button btn-xs">Edit</button></a>
+                      <a href="index.php?page=edit-comments&commentid=<?=$comment['id']?>"><button class="btn btn-success post-button btn-xs">Edit</button></a>
                     </li>
                       
                     <li>

@@ -83,7 +83,7 @@
                   <textarea class="form-control ckeditor" name="comment" id="comment" cols="30" rows="5"></textarea>
                 </div>
 
-                <?= isset($commentMessage) ? $commentNameMessage : '' ?>
+                <?= isset($commentMessage) ? $commentMessage : '' ?>
               
                 <div>
                   <input class="btn btn-default" type="submit" name="new-comment" value="Submit">
@@ -97,7 +97,7 @@
 
             <article id="edit-dot">
                 <h2>Posted Comments</h2> 
-                <p><?= htmlentities($comment['comment']) ?> </p>
+                <p><?= ($comment['comment']) ?> </p>
                 <small>Written by: <?= htmlentities($comment['author']) ?></small>
 
                 <?php

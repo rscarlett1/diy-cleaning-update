@@ -102,10 +102,9 @@ class FullRecipeController extends PageController{
 
 		$totalErrors = 0;
 
-		// Validate the comment
-		//validate the minimum length	
-		if( strlen($_POST['comment']) > 50 ) {
-			$this->data['commentMessage'] = '<p>Must be at most 50 characters</p>';
+		//Validate that the comments have text.
+		if (empty ( $_POST['comment'] )){
+			$this->data['commentMessage'] = '<p>You must enter a comment</p>';
 			$totalErrors++;
 		}
 

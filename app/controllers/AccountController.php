@@ -39,7 +39,15 @@ class AccountController extends PageController{
 		// Validation
 		$totalErrors = 0;
 
-		// Validate the first name
+		//validate the first name
+		if (empty ( $_POST['first-name'] )){
+			$this->data['firstNameMessage'] = '<p>You must enter your new first name</p>';
+		}
+
+		if (empty ( $_POST['last-name'] )){
+			$this->data['lastNameMessage'] = '<p>You must enter your new last name</p>';
+		}
+
 		if( strlen($_POST['first-name']) > 50 ) {
 			
 			$this->data['firstNameMessage'] = '<p>Must be at most 50 characters</p>';
@@ -61,8 +69,7 @@ class AccountController extends PageController{
 
 			$userID = $_SESSION['user_id'];
 
-
-			// Prepare the SQL
+			//Prepare the SQL
 			$sql = "UPDATE users
 					SET first_name = '$firstName',
 						last_name = '$lastName'
@@ -71,10 +78,13 @@ class AccountController extends PageController{
 			// Run the query
 			$this->dbc->query( $sql );
 
-			if( $this->dbc->affected_rows ) {
-				$this->data['postMessage'] = 'Success!';
+			$result = $this->dbc->query($sql);
+
+			
+			if( $firstName && $lastName ) {
+				$this->data['postMessage'] = 'Your name was successfully updated';
 			} else {
-				$this->data['postMessage'] = 'Something went wrong!';
+				$this->data['postMessage'] = 'Sorry! Something went wrong!';
 			}
 		}
 	}
